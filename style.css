@@ -1,0 +1,172 @@
+body{
+    background-color: #3B3B98;
+    margin: 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Muli', sans-serif;
+}
+
+.title{
+    margin: 0;
+    text-align: center;
+}
+
+.password-display{
+    border: 1px solid darkblue;
+    border-radius: .5rem;
+	color: #fff;
+	font-size: 16px;
+	padding: 1rem;
+    height: 1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+	letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    word-break: break-all;
+}
+
+
+.password-display #password{
+    word-wrap: break-word;
+	max-width: calc(100% - 40px);
+}
+
+.password-display .btn{
+    border: none;
+    border-radius: .5rem;
+	color: #fff;
+    font-size: 16px;
+    position: absolute;
+    cursor: pointer;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+    background-color: #3B3B98;
+}
+
+.password-display .btn:active{
+    background-color: #3B3B98;
+}
+
+.password-display .btn:before{
+    content: "Copied";
+    position: absolute;
+    top: -40px;
+    right: -25px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+    display: none;
+}
+
+.password-display .btn:after{
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.password-display.active .btn::before,
+.password-display.active .btn::after {
+    display: block;
+}
+
+
+.length-container{
+    display: flex;
+    align-items: center;
+}
+
+.number-input{
+    width: 2rem;
+}
+
+.container {
+    background-color: #23235B;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 2px solid darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.setting{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+.btn-large{
+    grid-column: span 2;
+    background-color: #3B3B98;
+    border: 2px solid darkblue;
+    color: #fff;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.btn-large:hover{
+    background-color: #0d0d2e;
+}
+
+@media screen and (max-width: 400px) {
+	.container {
+		font-size: 14px;
+	}
+}
+
+input[type="checkbox"] {
+	width: 40px;
+	height: 20px;
+	-webkit-appearance: none;
+	background-color: crimson;
+	outline: none;
+	border-radius: 20px;
+	box-shadow: inset 0 0 3.5px #BEBCBE;
+	transition: 0.3s;
+}
+
+input:checked[type="checkbox"]{
+	background-color: #00C853;
+}
+
+input[type="checkbox"]::before{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: whitesmoke;
+	border-radius: 20px;
+	box-shadow: 0 0 2px #BEBCBE;
+	transition: 0.3s;
+}
+
+input:checked[type="checkbox"]::before{
+	margin-left: 20px;
+}
+
